@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AccessibilityResearchBot</title>
+<meta name="description" content="What AccessibilityResearchBot does, how it behaves on your site, and how to contact us or opt out.">
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 1.0625rem/1.6 system-ui, sans-serif; max-width: 42rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  code, pre { font-family: ui-monospace, Consolas, monospace; }
+  code { overflow-wrap: anywhere; }
+  pre { padding: .75rem; border: 1px solid; overflow-x: auto; }
+  a:focus-visible { outline: 3px solid; outline-offset: 2px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>AccessibilityResearchBot</h1>
+  <p>This page explains the automated visitor that identifies itself as
+  <code>AccessibilityResearchBot/1.0 (+https://webaccessresearch.github.io)</code>.</p>
+</header>
+<main>
+  <h2>What it does</h2>
+  <p>We study whether people who use screen readers and keyboards can complete common tasks on
+  consumer websites, such as finding a product and choosing an option. The bot reads public pages
+  to decide which sites to study and to note basic public facts, such as whether a site has an
+  accessibility statement.</p>
+
+  <h2>How it behaves on your site</h2>
+  <ul>
+    <li>It reads only public pages. It never signs in, creates accounts, places orders, or
+      enters personal or payment information.</li>
+    <li>It follows <code>robots.txt</code>, including <code>Crawl-delay</code> (up to 60 seconds
+      between requests).</li>
+    <li>It makes one request at a time to a site, at least 4 seconds apart, and visits at most
+      4 sites at once.</li>
+    <li>It never tries to get around CAPTCHAs, bot challenges, rate limits or other blocks.
+      If a site blocks it, it stops and records that the site was blocked.</li>
+    <li>It does not use rotating proxies. It connects from a fixed address.</li>
+  </ul>
+
+  <h2>Browser-based checks</h2>
+  <p>Some checks use the Chromium web browser (the open-source base of Google Chrome), operated by
+  keyboard the way a person using assistive technology would. Those visits send the browser's own,
+  unmodified identity and follow the same rules: public pages only, no sign-in, no personal or
+  payment information, and they stop when blocked.</p>
+
+  <h2>How to opt out</h2>
+  <p>Add this to your <code>robots.txt</code>:</p>
+  <pre><code>User-agent: AccessibilityResearchBot
+Disallow: /</code></pre>
+
+  <h2>Contact</h2>
+  <p>Questions or concerns: <a href="mailto:webaccessresearch@gmail.com">webaccessresearch@gmail.com</a>.
+  Please include the domain and the approximate time of the visit.</p>
+</main>
+<footer>
+  <p>Last updated: <time datetime="2026-11-24">24 November 2026</time>.</p>
+</footer>
+</body>
+</html>
