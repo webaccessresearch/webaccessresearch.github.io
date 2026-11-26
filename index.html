@@ -45,6 +45,9 @@
   keyboard the way a person using assistive technology would. Those visits send the browser's own,
   unmodified identity and follow the same rules: public pages only, no sign-in, no personal or
   payment information, and they stop when blocked.</p>
+  <p>One exception: after adding an item to the cart in a test, the browser may open that
+  store's checkout page once, even where robots.txt asks crawlers to stay out of it. It never
+  enters personal or payment information, never submits anything and never places an order.</p>
 
   <h2>How to opt out</h2>
   <p>Add this to your <code>robots.txt</code>:</p>
@@ -56,7 +59,7 @@ Disallow: /</code></pre>
   Please include the domain and the approximate time of the visit.</p>
 </main>
 <footer>
-  <p>Last updated: <time datetime="2026-11-24">24 November 2026</time>.</p>
+  <p>Last updated: <time datetime="2026-11-26">26 November 2026</time>.</p>
 </footer>
 </body>
 </html>
